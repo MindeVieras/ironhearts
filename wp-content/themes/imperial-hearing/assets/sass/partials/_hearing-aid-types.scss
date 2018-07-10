@@ -1,0 +1,84 @@
+
+.hearing-aid-types-block {
+	.block-content {
+    padding: 15px 40px;
+		.block {
+			display: inline-block;
+			width: 100%;
+			color: $grey;
+			.block-image {
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				width: 320px;
+				height: 140px;
+				float: left;
+			}
+			.block-inner {
+				display: inline-block;
+				width: calc(100% - 400px);
+				margin-left: 40px;
+				margin-right: 40px;
+				padding-bottom: 25px;
+				padding-top: 25px;
+				border-bottom: 2px solid $lighter-grey;
+				.block-title {
+					font-size: 24px;
+					line-height: 36px;
+				}
+				.block-text {
+					font-size: 19px;
+					line-height: 30px;
+					height: 60px;
+					overflow: hidden;
+				}
+			}
+			&:last-child {
+				.block-inner{
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+	@include tablet {
+		.block-content {
+			padding: 15px 25px;
+			.block {
+				.block-image {
+					width: 250px;
+				}
+				.block-inner {
+					width: calc(100% - 290px);
+					margin-left: 20px;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+	@include medium {
+		.block-content {
+			padding: 15px 20px;
+			.block {
+				.block-image {
+					width: 100%;
+					height: 150px;
+				}
+				.block-inner {
+					width: 100%;
+					margin: 0;
+					padding: 20px;
+					.block-title {
+						font-size: 22px;
+						line-height: 31px;
+						font-family: 'poppins-light';
+					}
+					.block-text {
+						font-size: 15px;
+						line-height: 22px;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}

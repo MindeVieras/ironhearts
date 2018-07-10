@@ -1,0 +1,135 @@
+
+#shortcode-our-clinics {
+	li:before{content:''}
+	.top {
+		border-bottom: 15px solid $light-grey;
+	}
+	.head {
+		color: $purple;
+    font-family: 'poppins';
+    padding: 30px 40px;
+    .title {
+    	font-size: 32px;
+    }
+    .subtitle {
+			font-size: 19px;
+			line-height: 31px;
+    }
+	}
+	.places-wrapper {
+		background-color: $light-grey;
+	}
+	.results-place {
+		position: relative;
+		height: 275px;
+		color: $grey;
+		border-bottom: 15px solid $light-grey;
+		width: calc(100% / 3);
+    float: left;
+    margin: 0;
+    .main-link {
+    	background-color: $white;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	width: 100%;
+    	height: 100%;
+    	padding: 15px 25px;
+    	@include transition(all 0.15s ease);
+    }
+    .name {
+    	font-family: 'poppins-medium';
+    }
+    .address {
+    	color: $grey;
+			font-size: 16px;
+			line-height: 22px;
+			margin-top: 5px;
+    	li {
+    		padding: 0;
+    		margin: 0;
+    	}
+    }
+    .bottom {
+    	a {
+    		color: $grey;
+    		font-family: 'poppins-medium';
+				position: absolute;
+				bottom: 15px;
+    	}
+    }
+    &:hover {
+    	.main-link{
+    		background-color: $purple;
+    	}
+    	.name{color:$white}
+    	.address{color:$white}
+    	.bottom{a{color:$white}}
+    }
+	}
+	#our-clinics-form {
+		margin-top: 25px;
+		.input-name {
+			color: $grey;
+			display: inline-block;
+			float: left;
+			line-height: 42px;
+			font-size: 22px;
+			margin-right: 15px;
+		}
+		.form-control {
+			width: 310px;
+			font-size: 20px;
+			font-family: 'poppins-light';
+			padding: 5px 15px;
+			border: 1px solid #bebebe;
+			-webkit-box-shadow: 0px 0px 0px 1px rgba(222,222,222,1);
+			-moz-box-shadow: 0px 0px 0px 1px rgba(222,222,222,1);
+			box-shadow: 0px 0px 0px 1px rgba(222,222,222,1);
+		}
+	}
+	@include desktop {
+		.results-place {
+			font-size: 20px;
+			line-height: 26px;
+		}
+	}
+	@include tablet {
+		.results-place {
+			width: 50%;
+		}
+	}
+	@include medium {
+		.results-place {
+			height: 285px;
+			font-size: 18px;
+		}
+	}
+	@include mobile {
+		.head {
+			padding: 20px;
+			.title{font-size:22px}
+			.subtitle {
+				font-size: 15px;
+				line-height: 20px;
+				margin: 20px 0;
+			}
+		}
+		.results-place {
+			width: 100%;
+			height: auto;
+			.main-link {
+				padding: 15px 20px;
+			}
+			.bottom a{position:static}
+		}
+		#our-clinics-form {
+			.form-control {
+				width: 100%;
+				font-size: 18px;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+
+body#tinymce.wp-editor { 
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 10px; 
+}
+ 
+body#tinymce.wp-editor a {
+    color: #4CA6CF;
+}
+
+
+body#tinymce.wp-editor .content-block {
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+}

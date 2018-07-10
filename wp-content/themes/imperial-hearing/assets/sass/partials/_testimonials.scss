@@ -1,0 +1,46 @@
+
+.testimonials-block {
+	position: relative;
+	margin: 25px 0;
+	color: $purple;
+	font-family: 'poppins-light';
+	font-size: 19px;
+	line-height: 41px;
+	padding-bottom: 50px;
+	.testimonial-item {
+		position: relative;
+		margin-top: 100px;
+		padding-left: 80px;
+		.qoute {
+			position: absolute;
+			left: 35px;
+			width: 28px;
+			height: 30px;
+			top: -10px;
+			svg {
+				fill: $purple;
+			}
+			&.end {
+				display: inline-block;
+				position: static;
+				margin-left: 10px;
+			}
+		}
+		.author {
+			font-family: 'poppins';
+			margin-top: 40px;
+      border-bottom: 1px solid #3f2962;
+		}
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	.foot {
+		position: absolute;
+		font-family: 'poppins';
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    a {text-decoration:underline}
+	}
+}

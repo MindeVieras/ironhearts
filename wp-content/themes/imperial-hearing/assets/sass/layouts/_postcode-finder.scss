@@ -1,0 +1,214 @@
+
+#postcode-finder {
+	background-color: $light-grey;
+	display: inline-block;
+	width: 100%;
+	min-height: 250px;
+	overflow: hidden;
+	.top {
+		background-color: $white;
+		padding: 50px 60px 60px 110px;
+		overflow: hidden;
+		.head {
+			display: inline-block;
+			width: 50%;
+			float: left;
+		}
+		.title h1 {
+			padding: 0;
+			margin: 0;
+			font-weight: normal;
+			font-size: 34px;
+			line-height: 45px;
+		}
+		.subtitle {
+			font-size: 20px;
+			line-height: 31px;
+		}
+	}
+	.search-input {
+		display: inline-block;
+    width: 50%;
+    float: right;
+    #postcode-finder-form {
+    	position: relative;
+    	.message {
+				position: absolute;
+				top: -20px;
+    	}
+    }
+	  #postcode-finder-input {
+			width: 100%;
+			border: 1px solid #b5b5b5;
+			box-shadow: inset 0 1px 1px #e5e5e5;
+			font-family: 'poppins-light';
+			font-size: 24px;
+			line-height: 45px;
+			color: #7c7c7c;
+			padding: 10px 30px;
+		}
+	}
+	.postcode-finder-map-wrapper {
+		display: inline-block;
+		width: 100%;
+		height: 540px;
+	}
+	.results {
+		background-color: $white;
+		display: inline-block;
+		width: 100%;
+		padding: 35px 45px;
+		.results-title {
+			font-size: 32px;
+			line-height: 48px;
+		}
+		.results-subtitle {
+	    font-size: 19px;
+	    line-height: 31px;
+		}
+	}
+	.places-wrapper {
+		margin-top: 25px;
+		overflow: hidden;
+		.results-place {
+			width: 30%;
+			float: left;
+			margin: 0;
+			padding: 0;
+			&:before{content:''}
+			&:first-child{margin-right:5%}
+			&:last-child{margin-left:5%}
+			.name {
+				font-size: 19px;
+				line-height: 31px;
+				font-weight: bold;
+				color: #7c7c7c;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			.address {
+				color: #7c7c7c;
+				font-size: 19px;
+				line-height: 31px;
+				margin-top: 5px;
+				height: 195px;
+				li {
+					margin: 0;
+					padding: 0;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					&:before{content:''}
+				}
+			}
+			.bottom {
+        .info-list {
+          height: 75px;
+        }
+				.link {
+					width: 100%;
+					display: inline-block;
+			    font-size: 16px;
+			    line-height: 20px;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}			
+				.btn {
+					min-width: 175px;
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+	@include tablet {
+		.places-wrapper {
+			.results-place {
+				.name {
+					font-size: 16px;
+					line-height: 20px;
+				}
+				.address {
+					font-size: 16px;
+					line-height: 24px;
+					height: 160px;
+				}
+				.bottom {
+					.link{font-size:14px}
+					.more-info{
+						font-size: 14px;
+						padding: 10px;
+						min-width: 140px;
+					}
+				}
+			}
+		}
+	}
+	@include medium {
+		padding: 0 20px;
+		.top {
+			padding: 20px;
+			.head {
+				width: 100%;
+			}
+			.title {
+				h1 {
+					font-size: 22px;
+					line-height: 36px;
+				}
+			}
+			.subtitle {
+				font-size: 15px;
+				line-height: 22px;
+			}
+		}
+		.search-input {
+			width: 100%;
+			margin-top: 15px;
+			#postcode-finder-input {
+				font-size: 18px;
+				line-height: 24px;
+				padding: 15px;
+				margin-bottom: 15px;
+			}
+		}
+		.results {
+			padding: 20px;
+			.results-title {
+				font-size: 22px;
+				line-height: 36px;
+			}
+			.results-subtitle {
+				font-size: 15px;
+				line-height: 22px;
+			}
+		}
+		.places-wrapper {
+			.results-place {
+				width: 100%;
+				margin-bottom: 25px;
+				.name {
+					font-size: 18px;
+					line-height: 28px;
+				}
+				.address {
+					height: auto;
+				}
+				.bottom {
+					line-height: 18px;
+					.link {
+						font-size: 15px;
+						line-height: 18px;
+					}
+				}
+				&:first-child {
+					margin-right: 0;
+				}
+				&:last-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

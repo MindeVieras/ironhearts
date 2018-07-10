@@ -1,0 +1,41 @@
+
+.entry-hero {
+	.hero-bg {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 390px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 2;
+	}
+	.image-wrapper {
+		background-color: $purple;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		max-width: 1270px;
+		height: 388px;
+		margin: 0 auto;
+		z-index: 1;
+	}
+	@include tablet {
+		.hero-bg {
+			height: 320px;
+		}
+		.image-wrapper {
+			height: 318px;
+		}
+	}
+	@include medium {
+		.hero-bg {
+			height: 240px;
+		}
+		.image-wrapper {
+			height: 238px;
+		}
+	}
+}

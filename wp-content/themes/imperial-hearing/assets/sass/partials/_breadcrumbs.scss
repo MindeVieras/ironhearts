@@ -1,0 +1,15 @@
+
+#breadcrumbs {
+	font-size: 20px;
+	line-height: 41px;
+	color: $lighter-grey;
+	li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    &.separator{margin:0 3px}
+		&:before{content:''}
+	}
+	a{color:inherit}
+	.item-current{color:$grey}
+}

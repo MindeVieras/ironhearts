@@ -1,0 +1,113 @@
+
+@import 'base/normalize';
+@import 'base/form-reset';
+@import 'base/colors';
+@import 'base/mixins';
+@import 'base/fonts';
+@import 'base/icons';
+
+@import 'partials/header';
+@import 'partials/hero';
+@import 'partials/breadcrumbs';
+@import 'partials/block';
+@import 'partials/content';
+@import 'partials/articles-block';
+@import 'partials/advert-block';
+@import 'partials/book-block';
+@import 'partials/contact-block';
+@import 'partials/manufacturers-block';
+@import 'partials/upcoming-events';
+@import 'partials/meet-the-team';
+@import 'partials/hearing-aids';
+@import 'partials/hearing-aid-types';
+@import 'partials/find-advice';
+@import 'partials/shortcode-our-clinics';
+@import 'partials/shortcode-postcode-finder';
+@import 'partials/contact-us-form';
+@import 'partials/datetimepicker';
+@import 'partials/testimonials-slider';
+@import 'partials/testimonials';
+@import 'partials/owl';
+@import 'partials/footer';
+
+@import 'layouts/home';
+@import 'layouts/news-events';
+@import 'layouts/postcode-finder';
+@import 'layouts/centre';
+@import 'layouts/event';
+@import 'layouts/blog';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	background-color: $light-grey;
+	font-family: 'poppins', sans-serif;
+	font-size: 16px;
+	line-height: 1.25;
+	color: $jacarta;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: $jacarta;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#page-wrapper {
+	&.menu-is-open {
+		height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	}
+}
+
+#main {
+	position: relative;
+	z-index: 1;
+}
+
+.container {
+	max-width: 1270px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.btn {
+	display: inline-block;
+	background-color: $orange;
+	color: $white;
+	font-size: 18px;
+	padding: 10px 15px;
+	line-height: 20px;
+	min-width: 210px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	@include border-radius(30px);
+	@include transition(all 0.1s ease);
+	&:hover {
+		background-color: darken($orange, 5%);
+	}
+	@include mobile {
+		font-size: 14px;
+		font-family: 'poppins-medium';
+		padding: 7px 5px;
+		min-width: 185px;
+	}
+}

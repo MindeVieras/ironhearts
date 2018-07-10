@@ -1,0 +1,87 @@
+
+header.site-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: $space * 3;
+  padding-bottom: $space * 3;
+
+  .site-title {
+    font-size: em(46);
+  }
+}
+
+// Hamburger styling
+.hamburger {
+	display: none;
+	outline: none;
+	z-index: 1000;
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	padding: 15px 15px;
+	cursor: pointer;
+	.hamburger-inner{display:block}
+	.hamburger-box {
+	  width: 35px;
+	  height: 35px;
+	  display: inline-block;
+	  position: relative;
+	}
+	@include medium {
+		padding-right: 0;
+	}
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 35px;
+  height: 3px;
+  background-color: $purple;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+
+
+
+// Elastic
+
+.hamburger--elastic .hamburger-inner {
+  top: 6px;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.hamburger--elastic .hamburger-inner::before {
+  top: 10px;
+  transition: opacity 0.15s 0.4s ease;
+}
+.hamburger--elastic .hamburger-inner::after {
+  top: 20px;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger--elastic.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  background-color: $white;
+  transition-delay: 0.1s;
+}
+.hamburger--elastic.is-active .hamburger-inner::before {
+  transition-delay: 0s;
+  opacity: 0;
+}
+.hamburger--elastic.is-active .hamburger-inner::after {
+  transform: translate3d(0, -20px, 0) rotate(-270deg);
+	background-color: $white;
+  transition-delay: 0.1s;
+}

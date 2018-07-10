@@ -1,0 +1,228 @@
+
+#header-top {
+	height: 54px;
+	line-height: 54px;
+	@include gradient-hori($purple, $orange, 30%, 85%);
+	.links {
+		float: right;
+		font-size: 18px;
+		font-family: 'poppins-medium';
+		color: $white;
+		li {
+			display: inline-block;
+			margin-left: 20px;
+			i{margin-right:7px}
+			a{color:$white}
+		}
+	}
+	@include medium {
+		.links {
+			li {
+				span{display:none}
+			}
+		}
+	}
+	@include tablet {
+		height: 50px;
+		line-height: 50px;
+	}
+}
+
+#header-bottom {
+	background-color: $white;
+	height: 128px;
+	position: relative;
+	#site-logo {
+		width: 235px;
+		float: left;
+		margin-top: 25px;
+		img{width:235px}
+	}
+	@include desktop {
+		height: 110px;
+		#site-logo {
+			width: 180px;
+			margin-top: 25px;
+			img{width:180px}
+		}
+	}
+}
+
+#site-navigation {
+	#site-main-menu {
+		float: right;
+		font-size: 20px;
+		margin-top: 40px;
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 10px 5px;
+			&.current-menu-item {
+				font-family: 'poppins-medium';
+			}
+      &:hover {
+        color: $black;
+        text-shadow: 0.25px 0.25px 0px $black;
+      }
+		}
+		.menu-item-has-children {
+			.sub-menu {
+				display: none;
+				position: absolute;
+				top: 25px;
+				left: 0;
+				z-index: 111;
+        font-weight: normal;
+				li {
+					background-color: $white;
+					font-size: 17px;
+					width: 210px;
+					border-bottom: 1px solid $purple;
+					margin: 0;
+					padding: 10px;
+          text-shadow: none;
+					&:last-child {
+						border-bottom: 3px solid $purple;
+					}
+					&:hover {
+						background-color: $purple;
+						color: $white;
+						a{color:inherit}
+					}
+				}
+			}
+			&:hover {
+				.sub-menu {
+					display: block;
+				}
+			}
+		}
+		// if mobile menu is open
+		&.is-open {
+			display: block;
+			background-color: $purple;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			padding-top: 130px;
+			z-index: 999;
+			margin-top: 0;
+			max-height: 1000px;
+    	overflow-y: scroll;
+			li {
+				display: block;
+				line-height: 2;
+				text-align: center;
+				a {
+					color: $white;
+				}
+				.sub-menu {
+					display: inline-block;
+					position: static;
+					width: 100%;
+					li {
+						background: transparent;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+	@include desktop {
+		.hamburger {
+			display: inline-block;
+		}
+		#site-main-menu {
+			display: none;
+		}
+	}
+	@include desktop-large {
+		#site-main-menu {
+			font-size: 16px;
+			margin-top: 35px;
+			li{padding:10px 0}
+		}
+	}
+}
+
+
+
+// Hamburger styling
+.hamburger {
+	display: none;
+	outline: none;
+	z-index: 1000;
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	padding: 15px 15px;
+	cursor: pointer;
+	.hamburger-inner{display:block}
+	.hamburger-box {
+	  width: 35px;
+	  height: 35px;
+	  display: inline-block;
+	  position: relative;
+	}
+	@include medium {
+		padding-right: 0;
+	}
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 35px;
+  height: 3px;
+  background-color: $purple;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+
+
+
+// Elastic
+
+.hamburger--elastic .hamburger-inner {
+  top: 6px;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.hamburger--elastic .hamburger-inner::before {
+  top: 10px;
+  transition: opacity 0.15s 0.4s ease;
+}
+.hamburger--elastic .hamburger-inner::after {
+  top: 20px;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger--elastic.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  background-color: $white;
+  transition-delay: 0.1s;
+}
+.hamburger--elastic.is-active .hamburger-inner::before {
+  transition-delay: 0s;
+  opacity: 0;
+}
+.hamburger--elastic.is-active .hamburger-inner::after {
+  transform: translate3d(0, -20px, 0) rotate(-270deg);
+	background-color: $white;
+  transition-delay: 0.1s;
+}

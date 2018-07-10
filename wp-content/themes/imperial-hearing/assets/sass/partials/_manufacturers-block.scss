@@ -1,0 +1,35 @@
+
+.manufacturers-block {
+  padding-top: 50px;
+  padding-bottom: 15px;
+	text-align: center;
+	.block-item {
+		width: 22.5%;
+		display: inline-block;
+		margin-bottom: 35px;
+	}
+	.block {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 55px;
+	}
+	@include tablet {
+		.block {
+			height: 45px;
+		}
+	}
+	@include medium {
+		.block-item {
+			width: 32%;
+		}
+		.block {
+			height: 35px;
+		}
+	}
+	@include mobile {
+		.block-item {
+			width: 47%;
+		}
+	}
+}
