@@ -2,11 +2,31 @@
 header.site-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding-top: $space * 3;
   padding-bottom: $space * 3;
 
   .site-title {
     font-size: em(46);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .site-description {
+    text-align: right;
+    font-size: em(14);
+    padding: 0 10px;
+  }
+}
+
+#primary-menu {
+
+  ul {
+    display: flex;
+
+    li {
+      margin-left: $space;
+    }
   }
 }
 

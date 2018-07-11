@@ -443,18 +443,43 @@ select[multiple] {
   /* Move the label to the top */
   vertical-align: top; }
 
+.container {
+  max-width: 900px;
+  padding: 0 16px;
+  margin: 0 auto; }
+
 .container-wide {
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto; }
 
+h1.page-title {
+  font-size: 2em;
+  font-weight: 500;
+  color: #666666;
+  text-align: center;
+  padding: 40px 24px;
+  margin: 0; }
+
 header.site-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding-top: 24px;
   padding-bottom: 24px; }
 header.site-header .site-title {
-  font-size: 2.875em; }
+  font-size: 2.875em;
+  font-weight: 500;
+  line-height: 1.2; }
+header.site-header .site-description {
+  text-align: right;
+  font-size: 0.875em;
+  padding: 0 10px; }
+
+#primary-menu ul {
+  display: flex; }
+#primary-menu ul li {
+  margin-left: 8px; }
 
 .hamburger {
   display: none;
@@ -521,6 +546,19 @@ header.site-header .site-title {
   transform: translate3d(0, -20px, 0) rotate(-270deg);
   background-color: #ffffff;
   transition-delay: 0.1s; }
+
+.entry-content p.p1 {
+  text-align: justify;
+  text-align-last: center;
+  margin: 0;
+  margin-bottom: 16px;
+  line-height: 1.25; }
+
+footer.site-footer {
+  background-color: #808285;
+  color: #ffffff;
+  padding-top: 32px;
+  padding-bottom: 32px; }
 
 * {
   -webkit-box-sizing: border-box;

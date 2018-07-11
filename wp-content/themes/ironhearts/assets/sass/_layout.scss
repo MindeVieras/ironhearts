@@ -1,6 +1,21 @@
 
+.container {
+  max-width: 900px;
+  padding: 0 $space * 2;
+  margin: 0 auto;
+}
+
 .container-wide {
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 0 $space * 2.5;
   margin: 0 auto;
+}
+
+h1.page-title {
+  font-size: em(32);
+  font-weight: 500;
+  color: $text-grey;
+  text-align: center;
+  padding: $space * 5 $space * 3;
+  margin: 0;
 }
