@@ -13,10 +13,12 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer container-wide">
-		<div class="site-info">
-			Ironhearts Ltd.
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer">
+    <div class="container-wide">
+  		<div class="site-info">
+  			Ironhearts Ltd.
+  		</div><!-- .site-info -->
+    </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

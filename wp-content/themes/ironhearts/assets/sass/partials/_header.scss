@@ -3,8 +3,8 @@ header.site-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: $space * 3;
-  padding-bottom: $space * 3;
+  padding-top: $space * 6;
+  padding-bottom: $space * 6;
 
   .site-title {
     font-size: em(46);
@@ -19,14 +19,11 @@ header.site-header {
   }
 }
 
-#primary-menu {
+ul#primary-menu {
+  display: flex;
 
-  ul {
-    display: flex;
-
-    li {
-      margin-left: $space;
-    }
+  li {
+    margin-left: $space;
   }
 }
 

@@ -3,9 +3,43 @@
 
   p.p1 {
     text-align: justify;
-    text-align-last: center;
     margin: 0;
     margin-bottom: $space * 2;
-    line-height: 1.25;
+    font-size: em(19);
+    line-height: 1.5;
   }
+
+  img {
+
+    &.alignleft {
+      float: left;
+      margin-right: $space * 2.5;
+      margin-bottom: $space * 2;
+      margin-top: $space * 2;
+    }
+
+    &.alignright {
+      float: right;
+      margin-left: $space * 2.5;
+      margin-bottom: $space * 2;
+      margin-top: $space * 2;
+    }
+  }
+
+  ul {
+
+    li {
+      font-size: em(18);
+      line-height: 1.5;
+      margin-bottom: $space;
+    }
+  }
+
+  .ngg-galleryoverview {
+    display: flex!important;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: $space * 4;
+  }
+
 }

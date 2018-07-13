@@ -43,6 +43,9 @@ if ( ! function_exists( 'ironhearts_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+    // Set image sizes
+    add_image_size( 'hero-image', 1600, 1200 );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'main-menu' => esc_html__( 'Main menu', 'ironhearts' ),

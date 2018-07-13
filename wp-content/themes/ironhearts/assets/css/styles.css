@@ -444,7 +444,7 @@ select[multiple] {
   vertical-align: top; }
 
 .container {
-  max-width: 900px;
+  max-width: 1075px;
   padding: 0 16px;
   margin: 0 auto; }
 
@@ -465,8 +465,8 @@ header.site-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 24px;
-  padding-bottom: 24px; }
+  padding-top: 48px;
+  padding-bottom: 48px; }
 header.site-header .site-title {
   font-size: 2.875em;
   font-weight: 500;
@@ -476,9 +476,9 @@ header.site-header .site-description {
   font-size: 0.875em;
   padding: 0 10px; }
 
-#primary-menu ul {
+ul#primary-menu {
   display: flex; }
-#primary-menu ul li {
+ul#primary-menu li {
   margin-left: 8px; }
 
 .hamburger {
@@ -547,18 +547,41 @@ header.site-header .site-description {
   background-color: #ffffff;
   transition-delay: 0.1s; }
 
+.entry-hero .image-wrapper {
+  height: 460px; }
+
 .entry-content p.p1 {
   text-align: justify;
-  text-align-last: center;
   margin: 0;
   margin-bottom: 16px;
-  line-height: 1.25; }
+  font-size: 1.1875em;
+  line-height: 1.5; }
+.entry-content img.alignleft {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 16px;
+  margin-top: 16px; }
+.entry-content img.alignright {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 16px;
+  margin-top: 16px; }
+.entry-content ul li {
+  font-size: 1.125em;
+  line-height: 1.5;
+  margin-bottom: 8px; }
+.entry-content .ngg-galleryoverview {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 32px; }
 
 footer.site-footer {
   background-color: #808285;
   color: #ffffff;
   padding-top: 32px;
-  padding-bottom: 32px; }
+  padding-bottom: 32px;
+  margin-top: 80px; }
 
 * {
   -webkit-box-sizing: border-box;

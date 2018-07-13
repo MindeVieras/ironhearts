@@ -19,6 +19,7 @@ module.exports = function(grunt) {
                 files: {
                     './wp-content/themes/ironhearts/assets/js/scripts.js': [
                         './node_modules/owl.carousel/dist/owl.carousel.js',
+                        './node_modules/jquery-parallax.js/parallax.js',
                         './wp-content/themes/ironhearts/assets/js/src/**/*.js'
                     ]
                 },
