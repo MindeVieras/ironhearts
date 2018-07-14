@@ -1,8 +1,5 @@
 
 header.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   padding-top: $space * 6;
   padding-bottom: $space * 6;
 
@@ -11,19 +8,20 @@ header.site-header {
     font-weight: 500;
     line-height: 1.2;
   }
+}
 
-  .site-description {
-    text-align: right;
-    font-size: em(14);
-    padding: 0 10px;
-  }
+#site-navigation {
+  display: inline-block;
+  width: 100%;
 }
 
 ul#primary-menu {
   display: flex;
+  float: right;
 
   li {
-    margin-left: $space;
+    margin-left: $space * 2;
+    font-size: em(17);
   }
 }
 
